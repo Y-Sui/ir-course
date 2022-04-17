@@ -95,4 +95,8 @@ class EstablishIndex:
         self.writeToFile(self.dict, "./cache/doc2docID.json")
         self.writeToFile(sorted(self.wholeDocList), "./cache/wholeDocList.json")
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a77bae4a10bb8bd666ae4b0b76ab9f61bc8b206f
 EstablishIndex().createIndex()

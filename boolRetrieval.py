@@ -178,6 +178,7 @@ class BoolRetrieval:
             return nullReturn
         else:
             return result.pop()
+<<<<<<< HEAD
     def answer(self, query, answer):
         if answer == "需要":
             correct_input = [SpellingCheck().spellingCheck(i) for i in query]
@@ -205,3 +206,19 @@ class BoolRetrieval:
 # re_result = [doc2docID[str(i)] for i in result]
 # print(re_result)
 # x = BoolRetrieval().answer(input)
+=======
+
+
+# input = ["(", "americn", "AND", "china", ")"]
+input = ["(", "americn", "OR", "china", ")"]
+input = ["(", "americn", "AND", "china", ")"]
+input = ["americn", "AND", "china"]
+input = ["NOT", "english", "AND", "china"]
+
+# 拼写校正
+correct_input = [SpellingCheck().spellingCheck(i) for i in input]
+result = BoolRetrieval().query_to_search(correct_input, invertedIndex)
+# docID转换为doc目录
+re_result = [doc2docID[str(i)] for i in result]
+print(re_result)
+>>>>>>> a77bae4a10bb8bd666ae4b0b76ab9f61bc8b206f
